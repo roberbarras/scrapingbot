@@ -33,7 +33,6 @@ public class PeriodicTask {
                 .parallel()
                 .filter(processHtmlService::checkForSize)
                 .forEach(this::noticeAndDelete);
-
     }
 
     private void noticeAndDelete(Garment garment) {

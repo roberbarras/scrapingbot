@@ -44,6 +44,5 @@ public class SizesServiceImpl implements SizesService {
 
     public void sendMessageToKafka(GarmentAdvice messageToSend) {
         garmentProducerFactory.send(newAlertTopic, messageToSend);
-        //CompletableFuture.runAsync(() -> messageService.save(messageToSend));
     }
 }

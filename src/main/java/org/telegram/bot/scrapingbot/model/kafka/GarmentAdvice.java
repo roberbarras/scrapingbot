@@ -10,16 +10,10 @@ import lombok.*;
 public class GarmentAdvice {
 
     private long id;
-
     private int clientId;
-
     private String url;
-
     private String name;
-
     private String size;
-
     private boolean enabled;
-
     private boolean notified;
 }

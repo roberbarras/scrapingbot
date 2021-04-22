@@ -10,5 +10,4 @@ public interface RequestService {
     Map<String, Boolean> getSizes(AvailableSizesRequest garment);
 
     boolean checkForSize(Garment garment);
-
 }
