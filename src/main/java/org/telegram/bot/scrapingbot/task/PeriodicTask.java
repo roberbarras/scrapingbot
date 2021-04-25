@@ -18,7 +18,7 @@ public class PeriodicTask {
     GarmentRepository garmentRepository;
 
     @Autowired
-    RequestServiceImpl processHtmlService;
+    RequestServiceImpl requestService;
 
     @Autowired
     SizesServiceImpl sizesService;
@@ -31,7 +31,7 @@ public class PeriodicTask {
         garmentsToSearch
                 .stream()
                 .parallel()
-                .filter(processHtmlService::checkForSize)
+                .filter(requestService::checkForSize)
                 .forEach(this::noticeAndDelete);
     }
 
