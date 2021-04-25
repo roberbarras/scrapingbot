@@ -23,10 +23,10 @@ public class SizesServiceImpl implements SizesService {
     @Autowired
     private KafkaTemplate<String, GarmentAdvice> garmentProducerFactory;
 
-    @Value("${cloudkarafka.topic.sizesresponse}")
+    @Value("${kafka.topic.sizesresponse}")
     private String availableSizesResponseTopic;
 
-    @Value("${cloudkarafka.topic.newalert}")
+    @Value("${kafka.topic.newalert}")
     private String newAlertTopic;
 
     public void receiveSizesRequest(AvailableSizesRequest availableSizesRequest) {

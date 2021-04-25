@@ -42,7 +42,6 @@ public class RequestServiceImpl implements RequestService {
             log.info("SIZES: {}", map);
         } catch (IOException e) {
             log.error("ERROR al solicitar la url {}", url);
-            log.error(e.getMessage());
         }
         return map;
     }

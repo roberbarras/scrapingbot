@@ -14,7 +14,7 @@ public class KafkaTestListener {
     @Autowired
     SizesServiceImpl sizesService;
 
-    @KafkaListener(topics = "${cloudkarafka.topic.sizesrequest}",
+    @KafkaListener(topics = "${kafka.topic.sizesrequest}",
             containerFactory = "availableSizesConsumerFactory")
     public void consumeJson(AvailableSizesRequest messageReceived) {
         sizesService.receiveSizesRequest(messageReceived);
