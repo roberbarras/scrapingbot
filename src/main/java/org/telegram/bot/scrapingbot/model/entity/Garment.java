@@ -20,7 +20,7 @@ public class Garment implements Serializable {
     private long id;
 
     @Column
-    private int clientId;
+    private Long clientId;
 
     @Column
     private String url;
