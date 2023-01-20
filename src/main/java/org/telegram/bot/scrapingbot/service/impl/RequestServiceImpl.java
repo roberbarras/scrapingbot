@@ -34,6 +34,7 @@ public class RequestServiceImpl implements RequestService {
         Function<Element, Boolean> getAvailability = elem -> !elem.hasClass(Constants.DISABLED_CLASS);
         Function<Element, String> getSize = elem -> elem.child(0).child(0).child(0).childNodes().get(0).toString();
         try {
+            url = url.concat(url.contains("?") ? "&bm-verify=A" : "?bm-verify=A");
             Jsoup.connect(url).get()
                     .getElementsByClass(Constants.PRODUCT_LIST_CLASS)
                     .select(Constants.LIST_ELEMENT_CLASS)
